@@ -138,7 +138,7 @@
 		compatible = "qcom,qusb2phy-v2";
 		reg = <0x088e2000 0x400>,
 			<0x088e7014 0x4>;
-		reg-names = "qusb_phy_base", 
+		reg-names = "qusb_phy_base",
 				"refgen_north_bg_reg_addr";
 
 		qcom,efuse-bit-pos = <25>;

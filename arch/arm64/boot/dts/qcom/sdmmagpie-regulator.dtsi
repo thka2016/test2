@@ -812,7 +812,7 @@
 			qcom,init-enable = <1>;
 		};
 	};
-	
+
         rpmh-regulator-ldof3 {
 		compatible = "qcom,rpmh-xob-regulator";
 		mboxes = <&apps_rsc 0x0>;
@@ -827,9 +827,6 @@
 			qcom,init-enable = <1>;
 		};
 	};
-	
-	
-	
 
 	rpmh-regulator-ldof4 {
 		compatible = "qcom,rpmh-vrm-regulator";

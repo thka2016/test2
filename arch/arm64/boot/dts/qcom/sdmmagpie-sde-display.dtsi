@@ -88,7 +88,7 @@
 
 		qcom,panel-supply-entry@0 {
 			reg = <0>;
-			qcom,supply-name = "vddio";	// 1.8v, l13
+			qcom,supply-name = "vddio";
 			qcom,supply-min-voltage = <1904000>;
 			qcom,supply-max-voltage = <1904000>;
 			qcom,supply-enable-load = <32000>;
@@ -97,7 +97,7 @@
 
 		qcom,panel-supply-entry@1 {
 			reg = <1>;
-			qcom,supply-name = "vdda-3p3";	// 2.8v, l18
+			qcom,supply-name = "vdda-3p3";
 			qcom,supply-min-voltage = <3000000>;
 			qcom,supply-max-voltage = <3000000>;
 			qcom,supply-enable-load = <13200>;

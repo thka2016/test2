@@ -65,6 +65,6 @@
 		"SpkrLeft IN", "WSA_SPK1 OUT",
 		"WSA_SPK1 OUT", "VA_MCLK";
 	qcom,wsa-max-devs = <0>;
-	
+
 	qcom,wsa-aux-dev-prefix = "SpkrLeft", "SpkrLeft";
 };
