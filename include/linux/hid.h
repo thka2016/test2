@@ -520,6 +520,7 @@ enum hid_battery_status {
 
 struct hid_driver;
 struct hid_ll_driver;
+
 struct hid_device {							/* device report descriptor */
 	__u8 *dev_rdesc;
 	unsigned dev_rsize;
@@ -575,7 +576,7 @@ struct hid_device {							/* device report descriptor */
 	char name[128];							/* Device name */
 	char phys[64];							/* Device physical location */
 	char uniq[64];							/* Device unique identifier (serial #) */
-	
+
 	void *driver_data;
 
 	/* temporary hid_ff handling (until moved to the drivers) */
@@ -846,6 +847,7 @@ extern void hidinput_hid_event(struct hid_device *, struct hid_field *, struct h
 extern void hidinput_report_event(struct hid_device *hid, struct hid_report *report);
 extern int hidinput_connect(struct hid_device *hid, unsigned int force);
 extern void hidinput_disconnect(struct hid_device *);
+
 int hid_set_field(struct hid_field *, unsigned, __s32);
 int hid_input_report(struct hid_device *, int type, u8 *, u32, int);
 int hidinput_find_field(struct hid_device *hid, unsigned int type, unsigned int code, struct hid_field **field);
