@@ -3641,6 +3641,7 @@ static int __init gpiolib_dev_init(void)
 core_initcall(gpiolib_dev_init);
 
 #ifdef CONFIG_DEBUG_FS
+
 static void gpiolib_dbg_show(struct seq_file *s, struct gpio_device *gdev)
 {
 	unsigned		i;
