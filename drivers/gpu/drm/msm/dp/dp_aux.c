@@ -818,6 +818,7 @@ static int dp_aux_configure_aux_switch(struct dp_aux *dp_aux,
 	struct dp_aux_private *aux;
 	int rc = 0;
 	enum ssusb_redriver_function event = USBC_DISPLAYPORT_DISCONNECTED;
+
 	if (!dp_aux) {
 		pr_err("invalid input\n");
 		rc = -EINVAL;
