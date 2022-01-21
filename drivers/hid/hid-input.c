@@ -56,6 +56,7 @@ static const unsigned char hid_keyboard[256] = {
 	 29, 42, 56,125, 97, 54,100,126,164,166,165,163,161,115,114,113,
 	150,158,159,128,136,177,178,176,142,152,173,140,unk,unk,unk,unk
 };
+
 static const struct {
 	__s32 x;
 	__s32 y;
@@ -1213,6 +1214,7 @@ void hidinput_hid_event(struct hid_device *hid, struct hid_field *field, struct 
 {
 	struct input_dev *input;
 	unsigned *quirks = &hid->quirks;
+
 	if (!usage->type)
 		return;
 

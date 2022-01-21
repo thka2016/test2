@@ -913,6 +913,7 @@ static int mt_touch_input_configured(struct hid_device *hdev,
 	/* check for clickpads */
 	if ((td->mt_flags & INPUT_MT_POINTER) && (td->buttons_count == 1))
 		td->is_buttonpad = true;
+
 	if (td->is_buttonpad)
 		__set_bit(INPUT_PROP_BUTTONPAD, input->propbit);
 

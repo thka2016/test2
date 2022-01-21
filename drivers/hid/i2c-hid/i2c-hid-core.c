@@ -39,6 +39,7 @@
 #include <linux/acpi.h>
 #include <linux/of.h>
 #include <linux/regulator/consumer.h>
+
 #include <linux/platform_data/i2c-hid.h>
 
 #include "../hid-ids.h"
@@ -470,6 +471,7 @@ static int i2c_hid_hwreset(struct i2c_client *client)
 		dev_err(&client->dev, "failed to reset device.\n");
 		i2c_hid_set_power(client, I2C_HID_PWR_SLEEP);
 	}
+
 out_unlock:
 	mutex_unlock(&ihid->reset_lock);
 	return ret;
@@ -496,6 +498,7 @@ static void i2c_hid_get_input(struct i2c_hid *ihid)
 	}
 
 	ret_size = ihid->inbuf[0] | ihid->inbuf[1] << 8;
+
 	if (!ret_size) {
 		/* host or device initiated RESET completed */
 		if (test_and_clear_bit(I2C_HID_RESET_PENDING, &ihid->flags))
@@ -613,6 +616,7 @@ if(ihid->hid->kbhwinforeg==0)
 static irqreturn_t i2c_hid_irq(int irq, void *dev_id)
 {
 	struct i2c_hid *ihid = dev_id;
+
 	if (test_bit(I2C_HID_READ_PENDING, &ihid->flags))
 		return IRQ_HANDLED;
 
@@ -1308,7 +1312,7 @@ static int i2c_hid_remove(struct i2c_client *client)
 	struct hid_device *hid;
 		if(strcmp(hid->name,"hid-over-i2c 17EF:610B") == 0)
 			wakeup_source_trash(&kbwakesource);
-		
+
 	pm_runtime_get_sync(&client->dev);
 	pm_runtime_disable(&client->dev);
 	pm_runtime_set_suspended(&client->dev);
