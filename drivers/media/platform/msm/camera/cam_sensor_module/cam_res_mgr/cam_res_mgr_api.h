@@ -47,7 +47,6 @@ void cam_res_mgr_led_trigger_unregister(struct led_trigger *tp);
  *
  * @return None
  */
-
 void cam_res_mgr_led_trigger_event(struct led_trigger *trig,
 	enum led_brightness brightness);
 
