@@ -2543,7 +2543,6 @@ out:
 	return ret;
 }
 
-
 static int sdhci_msm_setup_vreg(struct sdhci_msm_pltfm_data *pdata,
 			bool enable, bool is_init)
 {
