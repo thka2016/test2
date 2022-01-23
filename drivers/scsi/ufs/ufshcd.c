@@ -49,7 +49,6 @@
 #include "ufs-debugfs.h"
 #include "ufs-qcom.h"
 
-
 #ifdef CONFIG_DEBUG_FS
 
 static int ufshcd_tag_req_type(struct request *rq)
