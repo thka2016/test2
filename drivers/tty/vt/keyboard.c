@@ -1442,6 +1442,7 @@ static void kbd_keycode(unsigned int keycode, int down, int hw_raw)
 
 	if ((raw_mode || kbd->kbdmode == VC_OFF) && type != KT_SPEC && type != KT_SHIFT)
 		return;
+
 	(*k_handler[type])(vc, keysym & 0xff, !down);
 
 	param.ledstate = kbd->ledflagstate;
