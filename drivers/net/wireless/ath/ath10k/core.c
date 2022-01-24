@@ -194,7 +194,6 @@ static const struct ath10k_hw_params ath10k_hw_params_list[] = {
 		.shadow_reg_support = false,
 		.rri_on_ddr = false,
 		.hw_filter_reset_required = true,
->>>>>>> 7d08ff64e1e0112bae9b2c8b6bf5a34bf91aad64
 	},
 	{
 		.id = QCA6174_HW_2_1_VERSION,

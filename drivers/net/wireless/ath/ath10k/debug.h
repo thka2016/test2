@@ -102,19 +102,7 @@ void ath10k_debug_unregister(struct ath10k *ar);
 void ath10k_debug_fw_stats_process(struct ath10k *ar, struct sk_buff *skb);
 void ath10k_debug_tpc_stats_process(struct ath10k *ar,
 				    struct ath10k_tpc_stats *tpc_stats);
-q
-struct ath10k_fw_crash_data *
-ath10k_debug_get_new_fw_crash_data(struct ath10k *ar);
-
 void ath10k_debug_dbglog_add(struct ath10k *ar, u8 *buffer, int len);
-
-int ath10k_debug_fw_devcoredump(struct ath10k *ar);
-
-=======
-void ath10k_debug_dbglog_add(struct ath10k *ar, u8 *buffer, int len);
-
->>>>>>> 7d08ff64e1e0112bae9b2c8b6bf5a34bf91aad64
-#define ATH10K_DFS_STAT_INC(ar, c) (ar->debug.dfs_stats.c++)
 
 void ath10k_debug_get_et_strings(struct ieee80211_hw *hw,
 				 struct ieee80211_vif *vif,

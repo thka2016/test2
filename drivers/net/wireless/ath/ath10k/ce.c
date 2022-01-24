@@ -626,7 +626,6 @@ static int _ath10k_ce_send_nolock_64(struct ath10k_ce_pipe *ce_state,
 	/* Update Source Ring Write Index */
 	write_index = CE_RING_IDX_INCR(nentries_mask, write_index);
 
->>>>>>> 7d08ff64e1e0112bae9b2c8b6bf5a34bf91aad64
 	if (!(flags & CE_SEND_FLAG_GATHER))
 		ath10k_ce_src_ring_write_index_set(ar, ctrl_addr, write_index);
 
